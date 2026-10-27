@@ -1,0 +1,52 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque ;
+}
+.parent{
+    height: 600px;
+    width: 400px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+}
+.child1{
+    width: 100%;
+    border-bottom: 3px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.child2{
+    height: 340px;
+    width: 100%;
+    display: flex;
+    margin-bottom: 100px;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    border-radius: 50%;
+    height: 250px;
+}
+.fa-xmark{
+    cursor: pointer;
+}
+button:hover{
+    background-color: red;
+}
+.close{
+    display: none;
+}
+body:has(#close:checked) .parent{
+      display: none;
+}
+body:has(#close:checked) .close{
+      display: none;
+}
